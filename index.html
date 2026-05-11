@@ -4,18 +4,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with Meyawo landing page.">
-    <meta name="author" content="Devcrud">
-    <title>Portfolio | Phung The Anh</title>
+    <meta name="description" content="Phung The Anh - Frontend Developer Portfolio. 3+ years of experience with ReactJS, NextJS, VueJS, TypeScript.">
+    <meta name="author" content="Phung The Anh">
+    <title data-i18n="meta.title">Portfolio | Phung The Anh</title>
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Meyawo main styles -->
     <link rel="stylesheet" href="assets/css/meyawo.css">
-    <!-- js -->
-    <script src='./index.js'></script>
+    <!-- Custom additions -->
+    <link rel="stylesheet" href="assets/css/custom.css">
     <!-- emailjs -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
             emailjs.init({
@@ -33,16 +32,23 @@
             <a class="logo" href="#">Portfolio.</a>
             <ul class="nav">
                 <li class="item">
-                    <a class="link" href="#home">Home</a>
+                    <a class="link" href="#home" data-i18n="nav.home">Home</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="#about">About</a>
+                    <a class="link" href="#about" data-i18n="nav.about">About</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="#portfolio">Portfolio</a>
+                    <a class="link" href="#skills" data-i18n="nav.skills">Skills</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="#contact">Contact</a>
+                    <a class="link" href="#experience" data-i18n="nav.experience">Experience</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#contact" data-i18n="nav.contact">Contact</a>
+                </li>
+                <li class="item lang-switcher" role="group" data-i18n-attr="aria-label:lang.switch.aria">
+                    <button type="button" class="lang-btn" data-lang-switch="en" aria-pressed="true">EN</button>
+                    <button type="button" class="lang-btn" data-lang-switch="vn" aria-pressed="false">VN</button>
                 </li>
             </ul>
             <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
@@ -58,203 +64,257 @@
         <div class="overlay"></div>
         <div class="header-content container">
             <h1 class="header-title">
-                <span class="up">HI!</span>
-                <span class="down">I am The Anh Phung</span>
+                <span class="up" data-i18n="header.greeting">HI!</span>
+                <span class="down" data-i18n="header.intro">I'm Phung The Anh</span>
             </h1>
-            <p class="header-subtitle">FRONTEND WEB</p>
-
-            <button class="btn btn-primary">Visit My Works</button>
+            <p class="header-subtitle" data-i18n="header.subtitle">FRONTEND DEVELOPER</p>
+            <a href="#experience" class="btn btn-primary" data-i18n="header.cta">Visit My Works</a>
         </div>
     </header><!-- end of page header -->
 
     <!-- about section -->
     <section class="section pt-0" id="about">
-        <!-- container -->
         <div class="container text-center">
-            <!-- about wrapper -->
             <div class="about">
                 <div class="about-img-holder">
-                    <img src="assets/imgs/avatar1.jpg" class="about-img"
-                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                    <img src="assets/imgs/avatar1.jpg" class="about-img" alt="Phung The Anh - Frontend Developer">
                 </div>
                 <div class="about-caption">
-                    <p class="section-subtitle">Who Am I ?</p>
-                    <h2 class="section-title mb-3">About Me</h2>
-                    <p>
-                        <b>Phung The Anh</b>
-                        <br><b>Major:</b> Information Technology
-                        <br><b>Electric Power University</b>
-                        <br><b>Experience:</b> I have 2 years experience and many clients are happy with the projects
-                        carried out
-                        <br>
-                        As a person with good logical thinking
-                        and creative ability, I hope to become one
-                        of the company's key programmers to
-                        bring optimal technology solutions to
-                        customers. At the same time, I want to
-                        improve my professional qualifications
-                        and career capacity
-                        <br>
-                        • Active, enthusiastic, honest, careful
-                        <br>
-                        • Analyze, evaluate, solve problems, find
-                        solutions, make decisions, work in
-                        groups, communicate well
-                    </p>
-                    <a href="assets/imgs/Phung-The-Anh-CV.pdf" download="">
-                        <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
+                    <p class="section-subtitle" data-i18n="about.subtitle">Who Am I?</p>
+                    <h2 class="section-title mb-3" data-i18n="about.title">About Me</h2>
+
+                    <ul class="about-info-list">
+                        <li>
+                            <strong data-i18n="about.name.label">Name:</strong>
+                            <span data-i18n="about.name.value">Phung The Anh</span>
+                        </li>
+                        <li>
+                            <strong data-i18n="about.address.label">Address:</strong>
+                            <span data-i18n="about.address.value">Thanh Xuan, Ha Noi</span>
+                        </li>
+                        <li>
+                            <strong data-i18n="about.email.label">Email:</strong>
+                            <a href="mailto:phungtheanh2001@gmail.com" data-i18n="about.email.value">phungtheanh2001@gmail.com</a>
+                        </li>
+                        <li>
+                            <strong data-i18n="about.major.label">Major:</strong>
+                            <span data-i18n="about.major.value">Information Technology - Electric Power University</span>
+                        </li>
+                    </ul>
+
+                    <h4 class="about-block-title" data-i18n="about.profile.title">Profile</h4>
+                    <p data-i18n="about.profile.text">Software developer with 3+ years of experience...</p>
+                    <p data-i18n="about.goal.text">My goal is to become a key member of a technical team...</p>
+
+                    <a id="cv-download-link" href="assets/imgs/Phung-The-Anh-CV-EN.pdf" download>
+                        <button type="button" class="btn-rounded btn btn-outline-primary mt-4" data-i18n="about.download">Download CV</button>
                     </a>
                 </div>
-            </div><!-- end of about wrapper -->
-        </div><!-- end of container -->
+            </div>
+        </div>
     </section> <!-- end of about section -->
 
-    <!-- service section -->
-    <section class="section" id="service">
+    <!-- skills section -->
+    <section class="section pt-0" id="skills">
         <div class="container text-center">
-            <p class="section-subtitle">What I Do ?</p>
-            <h6 class="section-title mb-6">Service</h6>
-            <!-- row -->
-            <div class="row justify-content-center">
+            <p class="section-subtitle" data-i18n="skills.subtitle">What I Use?</p>
+            <h6 class="section-title mb-6" data-i18n="skills.title">Skills & Technologies</h6>
+
+            <div class="row justify-content-center skills-grid">
                 <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="body">
-                            <img src="assets/imgs/pencil-case.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title">Programmer Web</h6>
-                            <p class="subtitle">HTML, CSS, Sass, Bootstrap, Tailwind, Javascript, ElectronJs, ReactJS,
-                                NextJS, Github,
-                                Wordpress, TypeScript, Eslint, React Native ...
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="body">
-                            <img src="assets/imgs/responsive.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title">Sapiente</h6>
-                            <p class="subtitle">Labore velit culpa adipisci excepturi consequuntur itaque in nam
-                                molestias dolorem iste quod.</p>
-                            </div>
-                        </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="body">
-                            <img src="assets/imgs/toolbox.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title">Placeat</h6>
-                            <p class="subtitle">Labore velit culpa adipisci excepturi consequuntur itaque in nam
-                                molestias dolorem iste quod.</p>
+                    <div class="skill-card">
+                        <i class="ti-palette skill-icon"></i>
+                        <h6 class="skill-group-title" data-i18n="skills.group.frontend">Frontend</h6>
+                        <div class="skill-tags">
+                            <span class="skill-tag">ReactJS</span>
+                            <span class="skill-tag">NextJS</span>
+                            <span class="skill-tag">VueJS</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Tailwind</span>
+                            <span class="skill-tag">Sass</span>
+                            <span class="skill-tag">Bootstrap</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="service-card">
-                        <div class="body">
-                            <img src="assets/imgs/analytics.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title">Iusto</h6>
-                            <p class="subtitle">Labore velit culpa adipisci excepturi consequuntur itaque in nam
-                                molestias dolorem iste quod.</p>
+                    <div class="skill-card">
+                        <i class="ti-server skill-icon"></i>
+                        <h6 class="skill-group-title" data-i18n="skills.group.backend">Backend & API</h6>
+                        <div class="skill-tags">
+                            <span class="skill-tag">NestJS</span>
+                            <span class="skill-tag">GraphQL</span>
+                            <span class="skill-tag">RESTful API</span>
+                            <span class="skill-tag">WebSocket</span>
                         </div>
                     </div>
-                </div> -->
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card">
+                        <i class="ti-settings skill-icon"></i>
+                        <h6 class="skill-group-title" data-i18n="skills.group.devops">DevOps & Tools</h6>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">GitLab CI</span>
+                            <span class="skill-tag">Git</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-card">
+                        <i class="ti-package skill-icon"></i>
+                        <h6 class="skill-group-title" data-i18n="skills.group.other">Others</h6>
+                        <div class="skill-tags">
+                            <span class="skill-tag">ElectronJS</span>
+                            <span class="skill-tag">Capacitor</span>
+                            <span class="skill-tag">Cordova</span>
+                            <span class="skill-tag">WordPress</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <!-- end of service section -->
+    <!-- end of skills section -->
 
-    <!-- portfolio section -->
-    <section class="section" id="portfolio">
-        <div class="container text-center">
-            <p class="section-subtitle">What I Did ?</p>
-            <h6 class="section-title mb-6">Recent Projects</h6>
-            <!-- row -->
-            <div class="row">
-                <div class="col-md-4">
-                    <a target="_blank" href="https://phutrobaohiem.vn/" class="portfolio-card">
-                        <img src="assets/imgs/folio-1.jpg" class="portfolio-card-img"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>Website about courses</h5>
-                                    <p class="font-weight-normal">Role: Frontend (HTML, CSS, JS, Jquery)</p>
-                            </span>
-                        </span>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a target="_blank" href="https://vncomex.com/" class="portfolio-card">
-                        <img class="portfolio-card-img" src="assets/imgs/folio-2.jpg" class="img-responsive rounded"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>Website about global import and export</h5>
-                                    <p class="font-weight-normal">Role: Frontend (NextJs)</p>
-                            </span>
-                        </span>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a target="_blank" href="https://www.hisport.vn/" class="portfolio-card">
-                        <img class="portfolio-card-img" src="assets/imgs/folio-3.jpg" class="img-responsive rounded"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                        <span class="portfolio-card-overlay">
-                            <span class="portfolio-card-caption">
-                                <h4>App booking sports - Hisport</h5>
-                                    <p class="font-weight-normal">Role: Frontend ( NextJs ) and build app Capacitor</p>
-                            </span>
-                        </span>
-                    </a>
-                </div>
-            </div><!-- end of row -->
-        </div><!-- end of container -->
-    </section> <!-- end of portfolio section -->
+    <!-- experience section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="text-center">
+                <p class="section-subtitle" data-i18n="experience.subtitle">My Journey</p>
+                <h6 class="section-title mb-6" data-i18n="experience.title">Professional Experience</h6>
+            </div>
+
+            <div class="timeline">
+                <article class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-period" data-i18n="experience.viettel.period">11/2025 – 05/2026</span>
+                        <h5 class="timeline-title" data-i18n="experience.viettel.title">Chatbot AI - Viettel AI</h5>
+                        <p class="timeline-role" data-i18n="experience.viettel.role">Frontend Developer (React.js, Vue.js, WebSocket)</p>
+                        <ul class="timeline-list">
+                            <li data-i18n="experience.viettel.item1"></li>
+                            <li data-i18n="experience.viettel.item2"></li>
+                            <li data-i18n="experience.viettel.item3"></li>
+                            <li data-i18n="experience.viettel.item4"></li>
+                            <li data-i18n="experience.viettel.item5"></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-period" data-i18n="experience.antv.period">04/2025 – 08/2025</span>
+                        <h5 class="timeline-title" data-i18n="experience.antv.title">News Website for An Ninh TV</h5>
+                        <p class="timeline-role" data-i18n="experience.antv.role">Frontend Developer (Next.js)</p>
+                        <ul class="timeline-list">
+                            <li data-i18n="experience.antv.item1"></li>
+                            <li data-i18n="experience.antv.item2"></li>
+                            <li data-i18n="experience.antv.item3"></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-period" data-i18n="experience.lutino.period">08/2024 – 04/2025</span>
+                        <h5 class="timeline-title" data-i18n="experience.lutino.title">AI Meeting Note-Taking Software – Lutino</h5>
+                        <p class="timeline-role" data-i18n="experience.lutino.role">Frontend Developer (ReactJS)</p>
+                        <ul class="timeline-list">
+                            <li data-i18n="experience.lutino.item1"></li>
+                            <li data-i18n="experience.lutino.item2"></li>
+                            <li data-i18n="experience.lutino.item3"></li>
+                            <li data-i18n="experience.lutino.item4"></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-period" data-i18n="experience.hisport.period">04/2024 – 04/2025</span>
+                        <h5 class="timeline-title" data-i18n="experience.hisport.title">Sports Booking App - Hisport</h5>
+                        <p class="timeline-role" data-i18n="experience.hisport.role">Frontend Developer (ReactJS) - Cordova & Capacitor</p>
+                        <ul class="timeline-list">
+                            <li data-i18n="experience.hisport.item1"></li>
+                            <li data-i18n="experience.hisport.item2"></li>
+                            <li data-i18n="experience.hisport.item3"></li>
+                            <li data-i18n="experience.hisport.item4"></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-period" data-i18n="experience.vdone.period">03/2023 – 02/2024</span>
+                        <h5 class="timeline-title" data-i18n="experience.vdone.title">E-commerce Website - VDONE</h5>
+                        <p class="timeline-role" data-i18n="experience.vdone.role">Frontend Developer (ReactJS & ElectronJS)</p>
+                        <ul class="timeline-list">
+                            <li data-i18n="experience.vdone.item1"></li>
+                            <li data-i18n="experience.vdone.item2"></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-period" data-i18n="experience.courses.period">08/2022 – 02/2023</span>
+                        <h5 class="timeline-title" data-i18n="experience.courses.title">Insurance Courses Website</h5>
+                        <p class="timeline-role" data-i18n="experience.courses.role">Frontend Developer (HTML, CSS, JS, jQuery)</p>
+                        <ul class="timeline-list">
+                            <li data-i18n="experience.courses.item1"></li>
+                            <li data-i18n="experience.courses.item2"></li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- end of experience section -->
 
     <!-- contact section -->
     <section class="section" id="contact">
         <div class="container text-center">
-            <p class="section-subtitle">How can you communicate?</p>
-            <h6 class="section-title mb-5">Contact Me</h6>
-            <!-- contact form -->
+            <p class="section-subtitle" data-i18n="contact.subtitle">How can you reach me?</p>
+            <h6 class="section-title mb-5" data-i18n="contact.title">Contact Me</h6>
             <div class="contact-form col-md-10 col-lg-8 m-auto">
                 <div class="form-row">
                     <div class="form-group col-sm-6">
-                        <input id='name' type="text" size="50" class="form-control" placeholder="Your Name" required>
+                        <input id="name" type="text" size="50" class="form-control"
+                            data-i18n-attr="placeholder:contact.form.name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group col-sm-6">
-                        <input id='email' type="email" class="form-control" placeholder="Enter Email" requried>
+                        <input id="email" type="email" class="form-control"
+                            data-i18n-attr="placeholder:contact.form.email" placeholder="Enter Email" required>
                     </div>
                     <div class="form-group col-sm-12">
                         <textarea id="message" name="comment" rows="6" class="form-control"
+                            data-i18n-attr="placeholder:contact.form.message"
                             placeholder="Write Something"></textarea>
                     </div>
                     <div class="form-group col-sm-12 mt-3">
-                        <input onclick='sendEmail()' value="Send Message" class="btn btn-outline-primary rounded">
+                        <input type="button" onclick="sendEmail()" value="Send Message"
+                            data-i18n-attr="value:contact.form.submit"
+                            class="btn btn-outline-primary rounded">
                     </div>
                 </div>
-            </div><!-- end of contact form -->
-        </div><!-- end of container -->
+            </div>
+        </div>
     </section><!-- end of contact section -->
 
     <!-- footer -->
     <div class="container">
         <footer class="footer">
-            <p class="mb-0">Portfolio | Phung The Anh</p>
+            <p class="mb-0" data-i18n="footer.copyright">Portfolio | Phung The Anh</p>
             <div class="social-links text-right m-auto ml-sm-auto">
-                <a href="https://www.facebook.com/theanh.phung.988/" class="link"><i class="ti-facebook"></i></a>
-                <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>
-                <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a>
-                <a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>
-                <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>
-                <a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>
+                <a href="https://www.facebook.com/theanh.phung.988/" class="link" target="_blank" rel="noopener"><i class="ti-facebook"></i></a>
+                <a href="mailto:phungtheanh2001@gmail.com" class="link"><i class="ti-email"></i></a>
+                <a href="tel:0386136374" class="link"><i class="ti-mobile"></i></a>
             </div>
         </footer>
     </div> <!-- end of page footer -->
@@ -268,6 +328,12 @@
 
     <!-- Meyawo js -->
     <script src="assets/js/meyawo.js"></script>
+
+    <!-- i18n (must load before index.js for translation helpers) -->
+    <script src="assets/js/i18n.js"></script>
+
+    <!-- App js -->
+    <script src="index.js"></script>
 </body>
 
 </html>

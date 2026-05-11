@@ -1,0 +1,359 @@
+/* =========================================================
+   Custom additions: language switcher, skills, experience
+   ========================================================= */
+
+/* ---------- Language switcher ---------- */
+.lang-switcher {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 4px;
+    margin-left: 14px !important;
+    padding: 3px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.18);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+}
+
+.lang-btn {
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    outline: none !important;
+    box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.lang-btn:focus,
+.lang-btn:focus-visible,
+.lang-btn:active,
+.lang-btn:-moz-focusring {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.lang-btn::-moz-focus-inner {
+    border: 0;
+}
+
+.lang-btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.lang-btn.active {
+    background: #695aa6;
+    color: #fff;
+}
+
+.lang-btn.active:focus,
+.lang-btn.active:focus-visible,
+.lang-btn.active:active {
+    box-shadow: none;
+    outline: none !important;
+}
+
+.custom-navbar.affix .lang-switcher {
+    background: rgba(105, 90, 166, 0.08);
+}
+
+.custom-navbar.affix .lang-btn {
+    color: #6c757d;
+}
+
+.custom-navbar.affix .lang-btn:hover {
+    color: #695aa6;
+    background: rgba(105, 90, 166, 0.12);
+}
+
+.custom-navbar.affix .lang-btn.active {
+    background: #695aa6;
+    color: #fff;
+}
+
+@media (max-width: 991.98px) {
+    .lang-switcher {
+        margin: 12px auto !important;
+        background: rgba(105, 90, 166, 0.08);
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+    }
+    .lang-btn {
+        color: #6c757d;
+    }
+}
+
+/* ---------- About info list ---------- */
+.about-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 8px 24px;
+    font-family: "Open Sans", sans-serif;
+    font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1300 - 300)));
+}
+
+.about-info-list li,
+.about-info-list li strong,
+.about-info-list li span,
+.about-info-list li a {
+    font-family: "Open Sans", sans-serif;
+}
+
+.about-info-list li {
+    color: #111;
+    font-weight: 100;
+    padding: 4px 0;
+    line-height: 1.6;
+}
+
+.about-info-list li strong {
+    color: #212529;
+    font-weight: 600;
+    margin-right: 6px;
+    display: inline-block;
+    min-width: 90px;
+}
+
+.about-info-list li a {
+    color: #695aa6;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.about-info-list li a:hover {
+    text-decoration: underline;
+}
+
+.about-block-title {
+    color: #695aa6;
+    font-weight: 600;
+    margin-top: 18px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* ---------- Skill cards ---------- */
+.skills-grid {
+    margin-top: 20px;
+}
+
+.skill-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 28px 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    height: 100%;
+    margin-bottom: 24px;
+    -webkit-transition: -webkit-transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid #f1f1f4;
+}
+
+.skill-card:hover {
+    -webkit-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(105, 90, 166, 0.18);
+}
+
+.skill-icon {
+    font-size: 36px;
+    color: #695aa6;
+    margin-bottom: 14px;
+    display: inline-block;
+}
+
+.skill-group-title {
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 16px;
+    font-size: 17px;
+}
+
+.skill-tags {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.skill-tag {
+    display: inline-block;
+    background: rgba(105, 90, 166, 0.08);
+    color: #695aa6;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 999px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+    background: #695aa6;
+    color: #fff;
+}
+
+/* ---------- Experience timeline ---------- */
+#experience {
+    background: #fafafc;
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto 0;
+    padding-left: 36px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 12px;
+    width: 2px;
+    background: -webkit-linear-gradient(top, #695aa6 0%, rgba(105, 90, 166, 0.2) 100%);
+    background: linear-gradient(to bottom, #695aa6 0%, rgba(105, 90, 166, 0.2) 100%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 36px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -32px;
+    top: 6px;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border: 3px solid #695aa6;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(105, 90, 166, 0.12);
+}
+
+.timeline-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 24px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f4;
+    -webkit-transition: -webkit-transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timeline-content:hover {
+    -webkit-transform: translateX(4px);
+    -ms-transform: translateX(4px);
+    transform: translateX(4px);
+    box-shadow: 0 8px 24px rgba(105, 90, 166, 0.15);
+}
+
+.timeline-period {
+    display: inline-block;
+    background: rgba(105, 90, 166, 0.1);
+    color: #695aa6;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+}
+
+.timeline-title {
+    color: #212529;
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-size: 18px;
+}
+
+.timeline-role {
+    color: #695aa6;
+    font-style: italic;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.timeline-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.timeline-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 6px;
+    color: #555;
+    font-size: 14.5px;
+    line-height: 1.55;
+}
+
+.timeline-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #695aa6;
+}
+
+@media (max-width: 575.98px) {
+    .timeline {
+        padding-left: 28px;
+    }
+    .timeline::before {
+        left: 8px;
+    }
+    .timeline-marker {
+        left: -26px;
+        width: 14px;
+        height: 14px;
+    }
+    .timeline-content {
+        padding: 16px 18px;
+    }
+    .timeline-title {
+        font-size: 16px;
+    }
+}
+
+/* ---------- Header CTA tweaks ---------- */
+.header .header-content .btn {
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* ---------- Anchor reset for portfolio overlay caption ---------- */
+.portfolio-card-overlay .portfolio-card-caption h4 {
+    color: #fff;
+    margin-bottom: 8px;
+}
